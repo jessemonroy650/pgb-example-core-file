@@ -106,10 +106,12 @@
             window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
             //document.getElementById('status').innerHTML        = 'window.requestFileSystem:<br /><pre>' + window.requestFileSystem + '</pre>';
 
-            window.requestFileSystem(window.TEMPORARY, 1024*1024,
-                filePlugin.onInitFs, 
-                function() {alert("error on window.requestFileSystem")}
-                );
+           window.addEventListener('filePluginIsReady', 
+               window.requestFileSystem(window.PERSISTENT, 1024*1024,
+                   filePlugin.onInitFs, 
+                   function() {alert("error on window.requestFileSystem")}
+                   ),
+               false);
             //
             //filePlugin.aboutFile2HTML('fanfare3.ogg', 'aboutFile');
         }
