@@ -2,19 +2,19 @@ var filePlugin = {
     version : '1.0.0',
 
     //
-/*
-function onInitFs(fs) {
+    function onInitFs(fs) {
 
-  fs.root.getFile('log.txt', {create: true, exclusive: true}, function(fileEntry) {
+        fs.root.getFile('fanfare3.ogg', {create: false, exclusive: true}, function(fileEntry) {
+            var tempdata = "" +
+            "<p class=r /><b>fileEntry.isFile:</b> "   + fileEntry.isFile +
+            "<p class=g /><b>fileEntry.name:</b> "     + fileEntry.name +
+            "<p class=b /><b>fileEntry.fullPath:</b> " + fileEntry.fullPath;
 
-    // fileEntry.isFile === true
-    // fileEntry.name == 'log.txt'
-    // fileEntry.fullPath == '/log.txt'
+            document.getElementById('status').innerHTML = tempdata;
 
-  }, errorHandler);
+        }, function () { alert('onInitFs() error') });
 
-}
-*/
+    },
     //
     properties2HTML : function (outputElementId) {
         var fileStuff = "" +
