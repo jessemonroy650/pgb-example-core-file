@@ -4,7 +4,7 @@ var filePlugin = {
     //
     onInitFs : function (fs) {
 
-        fs.root.getFile('index.html', {create: false}, function(fileEntry) {
+        fs.root.getFile('file:///android_asset/fanfare3.ogg', {create: false}, function(fileEntry) {
             var tempdata = "" +
             "<p class=r /><b>fileEntry.isFile:</b> "   + fileEntry.isFile +
             "<p class=g /><b>fileEntry.name:</b> "     + fileEntry.name +
