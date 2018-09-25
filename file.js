@@ -14,6 +14,7 @@ var filePlugin = {
 
         document.getElementById(outputElementId).innerHTML = fileStuff;
     },
+    //
     function aboutFile2HTML(fileEntry, feedbackId) {
         var feedbackStuff = "" +
         "<p class=r /><b>fileEntry.isFile:</b> "      + fileEntry.isFile +
@@ -22,7 +23,7 @@ var filePlugin = {
         "<p class=r /><b>fileEntry.fullPath:</b> "    + fileEntry.fullPath;
 
         document.getElementById(feedbackId).innerHTML = feedbackId;
-    },
+    }
     //
 /*
     function readFile(fileEntry, feedbackId) {
@@ -39,6 +40,6 @@ var filePlugin = {
             reader.readAsText(file);
  
         }, onErrorReadFile);
-*/
     }
+*/
 }

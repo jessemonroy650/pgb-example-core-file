@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.bsdmasterindex.pgb-example-core-media"
+        id          = "com.bsdmasterindex.pgb-example-core-file"
         version     = "1.0.0"
         versionCode = "10" >
         <!-- versionCode is optional and Android only -->
@@ -10,8 +10,8 @@
         <preference name="AndroidPersistentFileLocation" value="Compatibility" />
         <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,assets,root" />
 
-        <name>PGB Example Core Media</name>
-        <description>PGB Example Core using the Cordova 'Media' plugin</description>
+        <name>PGB Example Core File</name>
+        <description>PGB Example Core using the Cordova 'File' plugin</description>
         <author href="http://bsdmasterindex.com" email="jessemonroy650@yahoo.com">
         Jesse Monroy
         </author>
