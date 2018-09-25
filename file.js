@@ -1,6 +1,21 @@
 var filePlugin = {
     version : '1.0.0',
 
+    //
+/*
+function onInitFs(fs) {
+
+  fs.root.getFile('log.txt', {create: true, exclusive: true}, function(fileEntry) {
+
+    // fileEntry.isFile === true
+    // fileEntry.name == 'log.txt'
+    // fileEntry.fullPath == '/log.txt'
+
+  }, errorHandler);
+
+}
+*/
+    //
     properties2HTML : function (outputElementId) {
         var fileStuff = "" +
         "<p class=r /><b>cordova.file.applicationDirectory:</b> "                + cordova.file.applicationDirectory +
@@ -25,21 +40,4 @@ var filePlugin = {
         document.getElementById(feedbackId).innerHTML = feedbackStuff;
     }
     //
-/*
-    function readFile(fileEntry, feedbackId) {
-        var feedbackStuff = "" +
-
-        fileEntry.file(function (file) {
-            var reader = new FileReader();
-
-            reader.onloadend = function() {
-                console.log("Successful file read: " + this.result);
-                displayFileData(fileEntry.fullPath + ": " + this.result);
-            };
- 
-            reader.readAsText(file);
- 
-        }, onErrorReadFile);
-    }
-*/
 }

@@ -82,7 +82,7 @@
     }
     //
     function onLoad() {
-        alert("body loaded.");
+        //alert("body loaded.");
     }
     //
     function onDOMContentLoaded() {
@@ -96,12 +96,17 @@
         document.getElementById('isCordovaApp').innerHTML  = isCordovaApp();
         document.getElementById('isKnownDevice').innerHTML = isKnownDevice(navigator.platform);
         document.getElementById('appVersion').innerHTML    = app.version;
+
+        // Note: The file system has been prefixed as of Google Chrome 12:
+        window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
+        document.getElementById('status').innerHTML        = 'window.requestFileSystem:' + window.requestFileSystem;
+
         if (isCordovaApp(window.cordova)) {
             devicePlugin.properties2HTML('deviceStuff');
             //
-            filePlugin.properties2HTML('fileStuff');
+            //filePlugin.properties2HTML('fileStuff');
             //
-            filePlugin.aboutFile2HTML('fanfare3.ogg', 'aboutFile');
+            //filePlugin.aboutFile2HTML('fanfare3.ogg', 'aboutFile');
         }
     }
     // The 'DOMContentLoaded' event fires before the 'deviceready'
