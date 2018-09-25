@@ -4,15 +4,20 @@ var filePlugin = {
     //
     onInitFs : function (fs) {
 
-        fs.root.getFile('index.html', {create: false}, function(fileEntry) {
-            var tempdata = "" +
-            "<p class=r /><b>fileEntry.isFile:</b> "   + fileEntry.isFile +
-            "<p class=g /><b>fileEntry.name:</b> "     + fileEntry.name +
-            "<p class=b /><b>fileEntry.fullPath:</b> " + fileEntry.fullPath;
+        fs.root.getFile('index.html', {create: false}, 
+            function (fileEntry) {
+                var tempdata = "" +
+                "<p class=r /><b>fileEntry.isFile:</b> "   + fileEntry.isFile +
+                "<p class=g /><b>fileEntry.name:</b> "     + fileEntry.name +
+                "<p class=b /><b>fileEntry.fullPath:</b> " + fileEntry.fullPath;
 
-            document.getElementById('status').innerHTML = tempdata;
-
-        }, function (e) { alert('onInitFs() error:' + JSON.stringify(e)) });
+                document.getElementById('status').innerHTML = tempdata;
+            }, 
+            function (e) { 
+               document.getElementById('status').innerHTML = 'onInitFs() error:' + JSON.stringify(e);
+               alert('onInitFs() error:' + JSON.stringify(e));
+            }
+        );
 
     },
     //
