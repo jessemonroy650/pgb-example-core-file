@@ -106,9 +106,10 @@
             window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
             //document.getElementById('status').innerHTML        = 'window.requestFileSystem:<br /><pre>' + window.requestFileSystem + '</pre>';
 
+           // This is POORLY documented, as is window.PERSISTENT & window.requestFileSystem
            window.addEventListener('filePluginIsReady', 
                window.requestFileSystem(window.PERSISTENT, 1024*1024,
-                   filePlugin.onInitFs, 
+                   filePlugin.onInitFs,
                    function() {alert("error on window.requestFileSystem")}
                    ),
                false);
