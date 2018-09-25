@@ -22,7 +22,7 @@ var filePlugin = {
         "<p class=b /><b>fileEntry.name:</b> "        + fileEntry.name +
         "<p class=r /><b>fileEntry.fullPath:</b> "    + fileEntry.fullPath;
 
-        document.getElementById(feedbackId).innerHTML = feedbackId;
+        document.getElementById(feedbackId).innerHTML = feedbackStuff;
     }
     //
 /*
