@@ -2,7 +2,7 @@ var filePlugin = {
     version : '1.0.0',
 
     //
-    function onInitFs(fs) {
+    onInitFs : function (fs) {
 
         fs.root.getFile('fanfare3.ogg', {create: false, exclusive: true}, function(fileEntry) {
             var tempdata = "" +
