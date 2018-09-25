@@ -12,7 +12,7 @@ var filePlugin = {
 
             document.getElementById('status').innerHTML = tempdata;
 
-        }, function (e) { alert('onInitFs() error:' + e) });
+        }, function (e) { alert('onInitFs() error:' + JSON.stringify(e)) });
 
     },
     //
