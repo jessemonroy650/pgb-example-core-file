@@ -1,7 +1,7 @@
 var filePlugin = {
     version : '1.0.0',
 
-    function properties2HTML(outputElementId) {
+    properties2HTML : function (outputElementId) {
         var fileStuff = "" +
         "<p class=r /><b>cordova.file.applicationDirectory:</b> "                + cordova.file.applicationDirectory +
         "<p class=g /><b>cordova.file.applicationStorageDirectory:</b> "         + cordova.file.applicationStorageDirectory +
@@ -15,7 +15,7 @@ var filePlugin = {
         document.getElementById(outputElementId).innerHTML = fileStuff;
     },
     //
-    function aboutFile2HTML(fileEntry, feedbackId) {
+    aboutFile2HTML : function (fileEntry, feedbackId) {
         var feedbackStuff = "" +
         "<p class=r /><b>fileEntry.isFile:</b> "      + fileEntry.isFile +
         "<p class=g /><b>fileEntry.isDirectory:</b> " + fileEntry.isDirectory +

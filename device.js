@@ -1,7 +1,7 @@
 var devicePlugin = {
     version : '1.0.0',
 
-    function properties2HTML(outputElementId) {
+    properties2HTML : function (outputElementId) {
         var deviceStuff = "" +
         "<p class=r /><b>device.cordova:</b> "       + device.cordova +
         "<p class=g /><b>device.model:</b> "         + device.model +
