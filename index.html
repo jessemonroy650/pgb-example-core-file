@@ -99,12 +99,12 @@
 
         // Note: The file system has been prefixed as of Google Chrome 12:
         window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem;
-        document.getElementById('status').innerHTML        = 'window.requestFileSystem:' + window.requestFileSystem;
+        document.getElementById('status').innerHTML        = 'window.requestFileSystem:<br /><pre>' + window.requestFileSystem + '</pre>';
 
         if (isCordovaApp(window.cordova)) {
             devicePlugin.properties2HTML('deviceStuff');
             //
-            //filePlugin.properties2HTML('fileStuff');
+            filePlugin.properties2HTML('fileStuff');
             //
             //filePlugin.aboutFile2HTML('fanfare3.ogg', 'aboutFile');
         }
