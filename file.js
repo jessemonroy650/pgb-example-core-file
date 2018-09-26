@@ -15,7 +15,7 @@ var filePlugin = {
             }, 
             function (e) { 
                document.getElementById('status').innerHTML = 'onInitFs() error:' + JSON.stringify(e);
-               alert('onInitFs() error:' + JSON.stringify(e));
+               //alert('onInitFs() error:' + JSON.stringify(e));
             }
         );
 

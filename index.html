@@ -107,11 +107,13 @@
             //document.getElementById('status').innerHTML        = 'window.requestFileSystem:<br /><pre>' + window.requestFileSystem + '</pre>';
 
            // This is POORLY documented, as is window.PERSISTENT & window.requestFileSystem
-           document.getElementById('status').innerHTML        = 'Waiting for plugin';
+           document.getElementById('status').innerHTML        = "Waiting for 'file' plugin";
            window.addEventListener('filePluginIsReady', 
-               window.requestFileSystem(window.PERSISTENT, 1024*1024,
+               window.requestFileSystem(window.TEMPORARY, 1024*1024,
                    filePlugin.onInitFs,
-                   function() {alert("error on window.requestFileSystem")}
+                   function() {
+                       document.getElementById('status').innerHTML = "error on window.requestFileSystem";
+                   }
                    ),
                false);
             //
