@@ -23,7 +23,7 @@
         <!-- PLUGINS PLUGINS -->
         <!-- device required so we can detect if we are using iOS -->
         <plugin name="cordova-plugin-device" spec="~2.0.2" />
-        <plugin name="cordova-plugin-file" spec="~4.3.3" />
+        <plugin name="cordova-plugin-file" spec="~5.0.0" />
 
          <access origin="*" />
          <access origin="cdvfile://*" />
